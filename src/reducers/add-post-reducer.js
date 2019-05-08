@@ -14,6 +14,9 @@ const addPostReducer = (state = {}, action) => {
         }
       });
       return newState;
+    case 'UPVOTE_POST':
+    console.log(state[Object.keys(state)[0]].upVotes);
+      state[Object.keys(state)[0]].upVotes = state[Object.keys(state)[0]].upVotes + 1;
     default:
       return state;
   }

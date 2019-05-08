@@ -43,6 +43,10 @@ Post.propTypes = {
   votes: PropTypes.number.isRequired,
 };
 
-const mapStateToProps = upvotePost => ({ upvotePost: upvotePost });
+const mapStateToProps = state => {
+  return {
+    postList: state.postList
+  };
+};
 
 export default connect(mapStateToProps)(Post);

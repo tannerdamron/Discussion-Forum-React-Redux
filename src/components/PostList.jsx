@@ -17,6 +17,7 @@ function PostList(props) {
           downVotes={post.downVotes}
           votes={post.votes}
           timeStamp={post.timeStamp}
+          key={post.id}
         />
       })}
     </div>
@@ -25,7 +26,7 @@ function PostList(props) {
 
 const mapStateToProps = state => {
   return {
-    postList: state.postList
+    postList: state.postList,
   };
 };
 
